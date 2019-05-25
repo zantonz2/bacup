@@ -1,0 +1,5 @@
+@import './theme.scss';
+
+.bacup-theme {
+    @include  angular-material-theme ( $bacup-theme );
+}
