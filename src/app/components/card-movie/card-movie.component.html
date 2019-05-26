@@ -1,9 +1,17 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>{{movie.title}}</mat-card-title>
+    <mat-card-title>
+      <div class="title__text">
+        {{movie.title}}
+      </div>
+      <div class="title__favourite">
+        ss
+      </div>
+    </mat-card-title>
   </mat-card-header>
-  <img mat-card-image [src]="poster"/>
   <mat-card-content>
+    <mat-icon [ngClass]="{'material-icons-outlined':true}">grade</mat-icon>
+    <img mat-card-image [src]="poster"/>
     <div>{{movie.overview}}</div>
   </mat-card-content>
   <mat-card-actions>

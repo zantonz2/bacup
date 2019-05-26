@@ -7,8 +7,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatIconModule} from '@angular/material/icon';
 
 import { HttpService } from '@services/http.service';
+import { FavouriteService } from '@services/favourite.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,10 +29,12 @@ import { CardMovieComponent } from './components/card-movie/card-movie.component
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatIconModule
   ],
   providers: [
-    HttpService
+    HttpService,
+    FavouriteService
   ],
   bootstrap: [AppComponent]
 })
