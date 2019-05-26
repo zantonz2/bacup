@@ -1,0 +1,42 @@
+interface IMovie {
+    poster_path: string;
+    adult:  boolean;
+    overview: string;
+    release_date: string;
+    genre_ids: Array<number>;
+    id: number;
+    original_title: string;
+    original_language: string;
+    title: string;
+    backdrop_path: string;
+    popularity: number;
+    vote_count: number;
+    video: boolean;
+    vote_average: number;
+}
+
+export class Movie implements IMovie {
+    poster_path: string;
+    adult: boolean;
+    overview: string;
+    release_date: string;
+    genre_ids: Array<number>;
+    id: number;
+    original_title: string;
+    original_language: string;
+    title: string;
+    backdrop_path: string;
+    popularity: number;
+    vote_count: number;
+    video:  boolean;
+    vote_average: number;
+
+    constructor(movie: object) {
+        for (const key in movie) {
+            if (movie.hasOwnProperty(key)) {
+                this[key] = movie[key];
+            }
+        }
+    }
+}
+
