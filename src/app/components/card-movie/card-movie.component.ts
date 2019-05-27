@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Movie } from '@class/movie';
 
 import { HttpService } from '@services/http.service';
+import { FavouriteService } from '@services/favourite.service';
 
 @Component({
   selector: 'card-movie',
@@ -11,17 +12,29 @@ import { HttpService } from '@services/http.service';
 export class CardMovieComponent implements OnInit {
 
   constructor(
-    private httpS: HttpService
+    private httpS: HttpService,
+    private favouriteS: FavouriteService
   ) { }
 
   @Input() movie: Movie;
   poster;
 
+  favourite() {
+    return this.favouriteS.has(this.movie.id);
+  }
+
   ngOnInit() {
-    console.log(this.movie);
     this.httpS.getImg$(this.movie.poster_path).subscribe(img => {
       this.poster = img;
-    })
+    });
+  }
+
+  changeFavourite() {
+    if (this.favourite()) {
+      this.favouriteS.delete(this.movie.id);
+    } else {
+      this.favouriteS.add(this.movie);
+    }
   }
 
 }

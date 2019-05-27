@@ -1,0 +1,18 @@
+.title, .item {
+    display: flex;
+
+    mat-icon, div {
+        display: flex;
+        align-items: center;
+    }
+
+    mat-icon {
+        margin-right: 1rem;
+    }
+}
+
+.item {
+    mat-icon:hover {
+        cursor: pointer;
+    }
+}

@@ -1,16 +1,20 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>
-      <div class="title__text">
-        {{movie.title}}
-      </div>
-      <div class="title__favourite">
-        ss
+      <div class="title">
+        <div class="title__favourite">
+          <mat-icon class="favourite" 
+            [ngClass]="{'material-icons-outlined':!favourite()}"
+            (click)="changeFavourite()">
+          grade</mat-icon>
+        </div>
+        <div class="title__text">
+          {{movie.title}}
+        </div>
       </div>
     </mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <mat-icon [ngClass]="{'material-icons-outlined':true}">grade</mat-icon>
     <img mat-card-image [src]="poster"/>
     <div>{{movie.overview}}</div>
   </mat-card-content>

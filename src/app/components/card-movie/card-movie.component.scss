@@ -1,17 +1,27 @@
 mat-card-content div {
     height: 7rem;
     overflow: hidden;
-    text-overflow: ellipsis;
     background-color: #fff;
 }
 
+.title {
+    padding-bottom: 1rem;
+    width: 100%;
+    display: flex;
+}
+
 .title__text {
-    width: calc(100% - 3rem);
-    display: inline-block;
+    font-size: 18px;
+    display: flex;
+    align-items:center;
 }
 
 .title__favourite {
-    width: 3rem;
-    height: 100%;
-    float: left;
+    display: flex;
+    align-items:center;
+    margin-right: 0.5rem;
+}
+
+.favourite:hover {
+    cursor: pointer;
 }
