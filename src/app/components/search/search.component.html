@@ -1,0 +1,7 @@
+<ng-select 
+  [items]="searchItems$ | async"
+  bindLabel="title" 
+  bindValue="id"
+  (search)="onSearch($event)"
+  (scrollToEnd)="onScrollToEnd()"
+></ng-select>

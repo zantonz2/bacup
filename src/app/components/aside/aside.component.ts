@@ -23,5 +23,4 @@ export class AsideComponent implements OnInit {
   deleteFavourite(id: number) {
     this.favoriteS.delete(id);
   }
-
 }

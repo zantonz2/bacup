@@ -12,7 +12,11 @@ export class HttpService {
 
 	get$(path: string) {
   	const pathIn = (path.match(/\?/)) ? path : path + '?';
-		 return this.http.get(`https://api.themoviedb.org/3${pathIn}api_key=${this.apiKey}&language=ru`);
+		return this.http.get(`https://api.themoviedb.org/3${pathIn}api_key=${this.apiKey}&language=ru`);
+	}
+
+	getSearch$(query: string) {
+		return this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&language=ru&query=${query}`);
 	}
 
 	getImg$(path: string) {

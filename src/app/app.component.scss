@@ -36,3 +36,12 @@ aside {
         display: inline-block;
     }
 }
+
+$select-color: #c62828;
+/deep/.ng-select.ng-select-focused .ng-select-container:after {
+    border-color: $select-color !important;
+}
+
+/deep/.ng-select.ng-select-focused .ng-select-container .ng-arrow-wrapper .ng-arrow {
+    color: $select-color !important;
+}
