@@ -23,13 +23,17 @@ import { AppComponent } from './app.component';
 import { CardMovieComponent } from './components/card-movie/card-movie.component';
 import { AsideComponent } from './components/aside/aside.component';
 import { SearchComponent } from './components/search/search.component';
+import { OneMovieComponent } from './components/one-movie/one-movie.component';
+import { PopularComponent } from './components/popular/popular.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardMovieComponent,
     AsideComponent,
-    SearchComponent
+    SearchComponent,
+    OneMovieComponent,
+    PopularComponent
   ],
   imports: [
     BrowserModule,

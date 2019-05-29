@@ -1,0 +1,20 @@
+.movie__popular {
+    box-sizing: border-box;
+    width: 100%;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+@media (min-width:641px) {
+	.movie__popular {
+        width: calc(50% - 0.5rem);
+        margin-right: 0.5rem;
+    }
+}
+
+@media (min-width:900px) {
+	.movie__popular {
+        width: calc(25% - 0.5rem);
+        margin-right: 0.5rem;
+    }
+}

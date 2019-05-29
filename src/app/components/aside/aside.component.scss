@@ -16,3 +16,7 @@
         cursor: pointer;
     }
 }
+
+/deep/.mat-expansion-panel {
+    overflow:visible !important;
+}

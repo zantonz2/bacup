@@ -45,7 +45,7 @@ export class SearchComponent {
     if (this.searchQuery.page > this.searchQuery.total_pages) { return; }
     this.httpS.getSearch$(this.searchQuery.query + '&page=' + this.searchQuery.page)
     .subscribe(resp => {
-      this.searchQuery.results = this.searchQuery.results.concat(resp.results as Array<Movie>);
+      this.searchQuery.results = this.searchQuery.results.concat(resp['results'] as Array<Movie>);
       this.searchItems$.next(this.searchQuery.results);
     });
   }

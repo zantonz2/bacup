@@ -26,6 +26,7 @@ export class HttpService {
 				const reader = new FileReader();
 				reader.addEventListener('load', () => {
 					observer.next(reader.result);
+					observer.complete();
 				}, false);
 				reader.readAsDataURL(blob);
 			});

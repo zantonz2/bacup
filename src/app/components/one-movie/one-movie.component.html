@@ -1,0 +1,34 @@
+<div class="info"  *ngIf="info">
+    <div class="title">{{info.title}}</div>
+    <img [src]="poster" class="poster">
+    <table>
+        <tr>
+            <th>Информация:</th>
+        </tr>
+        <tr>
+            <td>Жанр:</td>
+            <td><span *ngFor="let item of info.genres; let i=index">{{ (i)? ' | ' + item.name: item.name  }}</span></td>
+        </tr>
+        <tr>
+            <td>Описание:</td>
+            <td>{{info.overview}}</td>
+        </tr>
+        <tr>
+            <td>Дата:</td>
+            <td>{{info.release_date}}</td>
+        </tr>
+        <tr>
+            <td>Компании:</td>
+            <td>
+                <div class="company">
+                    <img *ngFor="let item of companyLogo" [src]="item" class="company__logo shadow">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Страна:</td>
+            <td><span *ngFor="let item of info.production_countries" class="flag-icon shadow"></span></td>
+        </tr>
+    </table>
+</div>
+<card-movie *ngFor="let movie of recomendations" [movie]="movie"></card-movie>
