@@ -71,7 +71,6 @@ export class OneMovieComponent  {
       }
     });
     forkJoin(logoReq).subscribe(res => {
-      console.log(res);
       this.companyLogo = res;
     })
   }

@@ -1,1 +1,3 @@
-<card-movie *ngFor="let movie of movieItems"  class="movie__popular" [movie]="movie"></card-movie>
+<div class="movie__popular" *ngFor="let movie of movieItems">
+  <card-movie [movie]="movie"></card-movie>
+</div>

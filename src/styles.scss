@@ -3,3 +3,15 @@
 @import './theme.scss';
 @import '../node_modules/flag-icon-css/css/flag-icon.css';
 
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/9202.otf); 
+  src: local('Material Icons'), local('MaterialIcons-Regular'),
+    url(./font/9202.otf) format('otf');
+}
+
+html {
+  font-family: Helvetica;
+}

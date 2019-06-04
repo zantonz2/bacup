@@ -1,5 +1,5 @@
 <div class="info"  *ngIf="info">
-    <div class="title">{{info.title}}</div>
+    <h2 class="title">{{info.title}}</h2>
     <img [src]="poster" class="poster">
     <table>
         <tr>
@@ -31,4 +31,9 @@
         </tr>
     </table>
 </div>
-<card-movie *ngFor="let movie of recomendations" [movie]="movie"></card-movie>
+
+<cdk-virtual-scroll-viewport itemSize="26rem" orientation="horizontal" class="viewport">
+    <div *cdkVirtualFor="let item of recomendations" class="item">
+        <card-movie [movie]="item"></card-movie>
+    </div>
+</cdk-virtual-scroll-viewport>
